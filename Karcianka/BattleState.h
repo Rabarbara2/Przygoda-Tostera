@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "State.h"
 #include "Game.h"
+#include "EnemyBird.h"
 
 
 	class BattleState : public State
@@ -10,8 +11,11 @@
 	public:
 		BattleState(GameDataRef data);
 
+		EnemyBird birb;
+
 		void Init();
 
+		
 		void HandleInput();
 		void Update(float dt);
 		void Draw(float dt);

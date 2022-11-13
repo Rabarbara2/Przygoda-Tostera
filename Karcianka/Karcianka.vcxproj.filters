@@ -54,45 +54,57 @@
     <ClCompile Include="BattleState.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="EnemyBird.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Protagonist.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AI.h">
-      <Filter>Pliki źródłowe</Filter>
+    <ClInclude Include="BattleState.h">
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="AssetManager.h">
-      <Filter>Pliki źródłowe</Filter>
+    <ClInclude Include="EnemyBird.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="AI.h">
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="DEFINITIONS.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="GameOverState.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="GameState.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuState.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="PauseState.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="SplashState.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="State.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="StateMachine.h">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="BattleState.h">
+    <ClInclude Include="Protagonist.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>

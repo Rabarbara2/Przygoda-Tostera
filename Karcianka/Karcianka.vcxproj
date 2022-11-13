@@ -142,6 +142,7 @@
     <ClCompile Include="AI.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="BattleState.cpp" />
+    <ClCompile Include="EnemyBird.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameOverState.cpp" />
     <ClCompile Include="GameState.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="PauseState.cpp" />
+    <ClCompile Include="Protagonist.cpp" />
     <ClCompile Include="SplashState.cpp" />
     <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
@@ -158,12 +160,14 @@
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="BattleState.h" />
     <ClInclude Include="DEFINITIONS.h" />
+    <ClInclude Include="EnemyBird.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameOverState.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="PauseState.h" />
+    <ClInclude Include="Protagonist.h" />
     <ClInclude Include="SplashState.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
