@@ -6,19 +6,30 @@
 #include "GameState.h"
 #include "MainMenuState.h"
 #include <iostream>
-
+#include "EnemyBird.h"
+#include "Protagonist.h"
 
 	BattleState::BattleState(GameDataRef data) : _data(data)
 	{
 
 	}
 
+	EnemyBird birb;
+	Protagonist protagonista;
+
 	void BattleState::Init()
 	{
-		this->_data->assets.LoadTexture("Background", TLO_BITWY1);
-		this->_data->assets.LoadTexture("Postac", POSTAC);
-		this->_data->assets.LoadTexture("enemy", PTAK);
-		this->_data->assets.LoadTexture("karta", KARTA);
+		birb.Ealive = 1;
+		birb.hp = 100;
+		protagonista.Palive = 1;
+		protagonista.Php = 100;
+
+
+
+		this->_data->assets.LoadTexture("Background", TLO_BITWY1_FILEPATH);
+		this->_data->assets.LoadTexture("Postac", POSTAC_FILEPATH);
+		this->_data->assets.LoadTexture("enemy", PTAK_FILEPATH);
+		this->_data->assets.LoadTexture("karta", KARTA_FILEPATH);
 
 
 		this->_background.setTexture(this->_data->assets.GetTexture("Background"));
@@ -62,13 +73,12 @@
 
 			if (this->_data->input.IsSpriteClicked(this->_karta1, sf::Mouse::Left, this->_data->window))
 			{
-				
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				birb.TakeDamage(50);
+
 			}
 			if (this->_data->input.IsSpriteClicked(this->_karta2, sf::Mouse::Left, this->_data->window))
 			{
-
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				protagonista.PTakeDamage(50);
 			}
 			if (this->_data->input.IsSpriteClicked(this->_karta3, sf::Mouse::Left, this->_data->window))
 			{
@@ -90,7 +100,16 @@
 
 	void BattleState::Update(float dt)
 	{
-
+		birb.Update();
+		protagonista.PUpdate();
+		if (protagonista.Palive == 0)
+		{
+			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+		}
+		if (birb.Ealive == 0)
+		{
+			this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+		}
 	}
 
 	void BattleState::Draw(float dt)

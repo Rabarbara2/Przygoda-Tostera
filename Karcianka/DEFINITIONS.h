@@ -3,14 +3,20 @@
 #define SCREEN_WIDTH 1500
 #define SCREEN_HEIGHT 900
 
-#define SPLASH_STATE_SHOW_TIME 0.5
+#define SPLASH_STATE_SHOW_TIME 0.6
 //moje
-#define TLO_BITWY1 "Resources/Grafika/tloB1.jpg"
-#define POSTAC "Resources/Grafika/postac.png"
-#define PTAK "Resources/Grafika/ptak.png"
-#define KARTA "Resources/Grafika/cardtemplate.png"
+#define TLO_BITWY1_FILEPATH "Resources/Grafika/tloB1.jpg"
+#define POSTAC_FILEPATH "Resources/Grafika/postac.png"
+#define PTAK_FILEPATH "Resources/Grafika/ptak.png"
+#define KARTA_FILEPATH "Resources/Grafika/cardtemplate.png"
+#define SPLASH_FILEPATH "Resources/Grafika/splash1.png"
 //moje koniec
-#define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/res/Splash Background.png"
+
+
+
+
+
+
 #define MAIN_MENU_BACKGROUND_FILEPATH "Resources/res/Main Menu Background.png"
 #define GAME_BACKGROUND_FILEPATH "Resources/res/Main Menu Background.png"
 #define PAUSE_BACKGROUND_FILEPATH "Resources/res/Main Menu Background.png"
