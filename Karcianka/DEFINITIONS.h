@@ -10,6 +10,8 @@
 #define PTAK_FILEPATH "Resources/Grafika/ptak.png"
 #define KARTA_FILEPATH "Resources/Grafika/cardtemplate.png"
 #define SPLASH_FILEPATH "Resources/Grafika/splash1.png"
+#define ENDTURNBUTTON_FILEPATH "Resources/Grafika/endturnbutton.png"
+
 //moje koniec
 
 

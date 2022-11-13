@@ -13,7 +13,7 @@ public:
 	int shield = 0;
 	bool Ealive = 1;
 
-	void Atak();
+	int Atak();
 
 	void TakeDamage(int damage);
 	void Update();

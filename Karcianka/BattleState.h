@@ -26,6 +26,7 @@
 		sf::Sprite _background;
 
 		sf::Sprite _maincharacter;
+		sf::Sprite _endturnbutton;
 
 		sf::Sprite _enemy;
 

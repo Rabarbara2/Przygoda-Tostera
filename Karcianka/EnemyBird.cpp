@@ -9,9 +9,12 @@
 int hp = 100;
 int shield = 0;
 bool Ealive = 1;
-void EnemyBird::Atak()
+int EnemyBird::Atak()
 {
 
+	
+
+	return 10;
 }
 void EnemyBird::TakeDamage(int damage)
 {
