@@ -13,7 +13,7 @@
 	{
 
 	}
-
+	int turn = 1;
 	EnemyBird birb;
 	Protagonist protagonista;
 
@@ -30,6 +30,8 @@
 		this->_data->assets.LoadTexture("Postac", POSTAC_FILEPATH);
 		this->_data->assets.LoadTexture("enemy", PTAK_FILEPATH);
 		this->_data->assets.LoadTexture("karta", KARTA_FILEPATH);
+		this->_data->assets.LoadTexture("endturnbutton", ENDTURNBUTTON_FILEPATH);
+
 
 
 		this->_background.setTexture(this->_data->assets.GetTexture("Background"));
@@ -40,6 +42,10 @@
 		this->_karta3.setTexture(this->_data->assets.GetTexture("karta"));
 		this->_karta4.setTexture(this->_data->assets.GetTexture("karta"));
 		this->_karta5.setTexture(this->_data->assets.GetTexture("karta"));
+		this->_endturnbutton.setTexture(this->_data->assets.GetTexture("endturnbutton"));
+
+
+
 
 
 		
@@ -70,36 +76,60 @@
 			{
 				this->_data->window.close();
 			}
-
-			if (this->_data->input.IsSpriteClicked(this->_karta1, sf::Mouse::Left, this->_data->window))
+			if (this->_data->input.IsSpriteClicked(this->_endturnbutton, sf::Mouse::Left, this->_data->window))
 			{
-				birb.TakeDamage(50);
+				turn = turn * (-1);
+				if (turn == 1) // tura gracza
+				{
+					//gracz robi wziuuum
+
+				}
+				if (turn == -1)
+				{
+					protagonista.PTakeDamage(birb.Atak());
+
+				
+					
+					turn = turn * (-1);
+
+				}
 
 			}
-			if (this->_data->input.IsSpriteClicked(this->_karta2, sf::Mouse::Left, this->_data->window))
+			if (turn == 1) // jak tura jest moja to mo¿na u¿ywaæ kart
 			{
-				protagonista.PTakeDamage(50);
-			}
-			if (this->_data->input.IsSpriteClicked(this->_karta3, sf::Mouse::Left, this->_data->window))
-			{
+				if (this->_data->input.IsSpriteClicked(this->_karta1, sf::Mouse::Left, this->_data->window))
+				{
+					birb.TakeDamage(50);
 
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-			}
-			if (this->_data->input.IsSpriteClicked(this->_karta4, sf::Mouse::Left, this->_data->window))
-			{
+				}
+				if (this->_data->input.IsSpriteClicked(this->_karta2, sf::Mouse::Left, this->_data->window))
+				{
+					protagonista.PTakeDamage(50);
+				}
+				if (this->_data->input.IsSpriteClicked(this->_karta3, sf::Mouse::Left, this->_data->window))
+				{
 
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-			}
-			if (this->_data->input.IsSpriteClicked(this->_karta5, sf::Mouse::Left, this->_data->window))
-			{
+				
+				}
+				if (this->_data->input.IsSpriteClicked(this->_karta4, sf::Mouse::Left, this->_data->window))
+				{
 
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+					this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				}
+				if (this->_data->input.IsSpriteClicked(this->_karta5, sf::Mouse::Left, this->_data->window))
+				{
+
+					this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				}
 			}
 		}
 	}
 
 	void BattleState::Update(float dt)
 	{
+		
+
+
 		birb.Update();
 		protagonista.PUpdate();
 		if (protagonista.Palive == 0)
@@ -124,6 +154,8 @@
 		this->_data->window.draw(this->_karta3);
 		this->_data->window.draw(this->_karta4);
 		this->_data->window.draw(this->_karta5);
+		this->_data->window.draw(this->_endturnbutton);
+
 
 
 
