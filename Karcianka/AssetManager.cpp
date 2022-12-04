@@ -11,6 +11,21 @@
 			this->_textures[name] = tex;
 		}
 	}
+	sf::SoundBuffer& AssetManager::GetSound(std::string name)
+	{
+		return this->_sounds.at(name);
+	}
+
+	void AssetManager::LoadSound(std::string name, std::string fileName)
+	{
+		sf::SoundBuffer buffer;
+
+		if (buffer.loadFromFile(fileName))
+		{
+			this->_sounds[name] = buffer;
+
+		}
+	}
 
 	sf::Texture &AssetManager::GetTexture(std::string name)
 	{

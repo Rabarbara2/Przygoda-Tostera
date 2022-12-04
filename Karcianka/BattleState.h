@@ -36,6 +36,8 @@
 		sf::Sprite _karta4;
 		sf::Sprite _karta5;
 
+		sf::Sound _music;
+
 
 
 	};

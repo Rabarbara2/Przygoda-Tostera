@@ -1,5 +1,5 @@
 #pragma once
-
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include "State.h"
 #include "Game.h"
@@ -23,4 +23,7 @@
 
 		sf::Texture _backgroundTexture;
 		sf::Sprite _background;
+
+		sf::SoundBuffer introBuffer;
+		sf::Sound _intro;
 	};

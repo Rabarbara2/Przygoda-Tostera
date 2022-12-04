@@ -26,4 +26,7 @@
 		sf::Sprite _playButtonOuter;
 
 		sf::Sprite _title;
+
+		sf::SoundBuffer musicBuffer;
+		sf::Sound _music;
 	};

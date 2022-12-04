@@ -3,7 +3,7 @@
 #define SCREEN_WIDTH 1500
 #define SCREEN_HEIGHT 900
 
-#define SPLASH_STATE_SHOW_TIME 0.6
+#define SPLASH_STATE_SHOW_TIME 2.8
 //moje
 #define TLO_BITWY1_FILEPATH "Resources/Grafika/tloB1.jpg"
 #define POSTAC_FILEPATH "Resources/Grafika/postac.png"
@@ -11,6 +11,9 @@
 #define KARTA_FILEPATH "Resources/Grafika/cardtemplate.png"
 #define SPLASH_FILEPATH "Resources/Grafika/splash1.png"
 #define ENDTURNBUTTON_FILEPATH "Resources/Grafika/endturnbutton.png"
+#define INTRO "Resources/Muzyka/intro.wav"
+#define MENU_MUSIC "Resources/Muzyka/manu.wav"
+#define MUZYKA1 "Resources/Muzyka/1.wav"
 
 //moje koniec
 
