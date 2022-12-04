@@ -17,6 +17,11 @@
 	{
 		this->_data->assets.LoadTexture("Splash State Background", SPLASH_FILEPATH);
 
+		this->_data->assets.LoadSound("Intro", INTRO);
+		_intro.setBuffer(this->_data->assets.GetSound("Intro"));
+		_intro.setVolume(50.f);
+		_intro.play();
+
 		_background.setTexture(this->_data->assets.GetTexture("Splash State Background"));
 	}
 

@@ -26,6 +26,15 @@
 
 
 
+
+
+
+		//play intro 
+		_music.setBuffer(this->_data->assets.GetSound("Muzyka"));
+		_music.setVolume(40.f);
+		_music.play();
+
+
 		this->_data->assets.LoadTexture("Background", TLO_BITWY1_FILEPATH);
 		this->_data->assets.LoadTexture("Postac", POSTAC_FILEPATH);
 		this->_data->assets.LoadTexture("enemy", PTAK_FILEPATH);
@@ -134,10 +143,12 @@
 		protagonista.PUpdate();
 		if (protagonista.Palive == 0)
 		{
+			_music.stop();
 			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 		}
 		if (birb.Ealive == 0)
 		{
+			_music.stop();
 			this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
 		}
 	}

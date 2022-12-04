@@ -16,6 +16,14 @@
 
 	void MainMenuState::Init()
 	{
+
+
+
+		_music.setBuffer(this->_data->assets.GetSound("Muzyka Menu"));
+		_music.setVolume(50.f);
+		_music.play();
+
+
 		this->_data->assets.LoadTexture("Background", MAIN_MENU_BACKGROUND_FILEPATH);
 		this->_data->assets.LoadTexture("Play Button", MAIN_MENU_PLAY_BUTTON);
 		this->_data->assets.LoadTexture("Play Button Outer", MAIN_MENU_PLAY_BUTTON_OUTER);
@@ -46,6 +54,7 @@
 			if (this->_data->input.IsSpriteClicked(this->_playButton, sf::Mouse::Left, this->_data->window))
 			{
 				// Switch To Game State
+				_music.stop();
 				this->_data->machine.AddState(StateRef(new BattleState(_data)), true);
 			}
 		}
